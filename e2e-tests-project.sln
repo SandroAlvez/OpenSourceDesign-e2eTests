@@ -2,9 +2,7 @@
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codeflow-project", "codeflow-project.csproj", "{A1372D12-8C27-4C1B-B72F-9010F57E5833}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e2e-tests-project", "e2e-tests-project.csproj", "{34701BC9-F3EE-4B5C-8424-D1C41701580B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "e2e-tests-project", "e2e-tests-project.csproj", "{A1372D12-8C27-4C1B-B72F-9010F57E5833}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
