@@ -40,3 +40,31 @@ OSDe2eTests/
 └── .gitignore
 ```
 
+# Prerequisites and execution
+
+*At the moment there are no executions. But here's how you can take a look at the project:
+
+1. Have an IDE to run and execute the tests
+2. Have the .NET10 installed (use dotnet --version at the terminal to check)
+3. Clone the repository: git clone https://github.com/SandroAlvez/OpenSourceDesign-e2eTests.git
+4. Restore the packages: dotnet restore e2e-tests-project.csproj
+5. Compile the packages: dotnet build e2e-tests-project.csproj
+
+
+# Project Status
+
+## Done
+
+- Technologies defined
+- WebDriver lifecycle configured
+
+
+## Ongoing
+
+- Finish the "Home Page" locator/methods class
+- Finish "Home Page" tests
+
+## Next steps
+
+- Build the "Events" page locator/methods class
+- Build "Events" tests
