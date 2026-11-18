@@ -42,36 +42,32 @@ public class HomePageTests : TestBase
     //Mock data for search test   
     //private string searchText = "Design";
     
-    /*[TestMethod]
+    [TestMethod]
+    [TestCategory("Smoke")]
     public void SearchText(string searchText)
     {
         //Calls homePage.cs
         HomePage homePage = new HomePage(driver);
 
+        //Opens the page
+        homePage.OpenHomePage();
+
+        Assert.AreEqual("Open Source Design", homePage.PageTitle);
+
         //Make a search
         homePage.Search(searchText); 
 
         //Get the search results
-        string[] searchResults = homePage.GetSearchResults();
+        IReadOnlyCollection<IWebElement> searchResults = homePage.GetSearchResultsElements();
 
         //Verify if the text is found in the search results
-        foreach (string result in searchResults)
+        foreach (IWebElement result in searchResults)
         {
-            Assert.IsTrue(result.Contains("Design"));
+            Assert.IsTrue(result.Text.Contains(searchText, StringComparison.OrdinalIgnoreCase));
+            
         }
-    }*/
-
-    //[TestMethod]
-    public void AccessHomePage()
-    {
-        //Calls homePage.cs
-        HomePage homePage = new HomePage(driver);
-
-        //Go to website
-        driver.Navigate().GoToUrl(homePage.homePageUrl);
-        
-        //Verify if home page is loaded
-        Assert.AreEqual("Open Source Design", homePage.PageTitle);
     }
+
+
 
 }
