@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace sandroCodeflow.src.tests;
+namespace OSDe2Tests.src.tests;
 
 
 public class TestBase

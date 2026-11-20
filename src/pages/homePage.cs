@@ -1,14 +1,14 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 
-namespace sandroCodeflow.src.pages;
+namespace OSDe2Tests.src.pages;
 
 public class HomePage {   
 
     //Private field for the WebDriver instance
     private IWebDriver driver;
 
-    //Explicit wait
+    //Declares explicit wait
     private WebDriverWait wait;
 
     //Constructor for the HomePage class
@@ -38,7 +38,13 @@ public class HomePage {
     //Locator for content of the search results
     private IWebElement SearchResultsContent => driver.FindElement(By.XPath("//div[@class='osd-search__panel']//p"));
 
-    //Function to perform a search on the home page
+    //Opens the home page
+    public void OpenHomePage()
+    {
+        driver.Navigate().GoToUrl(homePageUrl);
+    }
+
+    //Performs a search on the home page
     public void Search(string searchText)
     {
 

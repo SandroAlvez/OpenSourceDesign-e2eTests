@@ -1090,11 +1090,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandroCodeflow\\codeflow-project.csproj",
-      "projectName": "codeflow-project",
-      "projectPath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandroCodeflow\\codeflow-project.csproj",
+      "projectUniqueName": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\OSDe2eTests\\e2e-tests-project.csproj",
+      "projectName": "e2e-tests-project",
+      "projectPath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\OSDe2eTests\\e2e-tests-project.csproj",
       "packagesPath": "C:\\Users\\srjunior2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\sandroCodeflow\\obj\\",
+      "outputPath": "C:\\Users\\srjunior2\\OneDrive - Stefanini\\Documentos\\codeFlow\\OSDe2eTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\srjunior2\\AppData\\Roaming\\NuGet\\NuGet.Config"

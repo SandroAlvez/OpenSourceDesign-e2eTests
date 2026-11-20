@@ -1,16 +1,15 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using sandroCodeflow.src.pages;
+using OSDe2Tests.src.pages;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
-namespace sandroCodeflow.src.tests;
+namespace OSDe2Tests.src.tests;
 
 [TestClass]
 public class HomePageTests : TestBase
 {
-    private string searchText = "Design";
-
+    
     [TestMethod]
     //Temporary test to verify if methods in homePage.cs are working as expected
     public void FlowTest()
@@ -18,24 +17,17 @@ public class HomePageTests : TestBase
         //Calls homePage.cs
         HomePage homePage = new HomePage(driver);
 
-        //Go to website
-        driver.Navigate().GoToUrl(homePage.homePageUrl);
-        
-        //Verify if home page is loaded
-        Assert.AreEqual("Open Source Design", homePage.PageTitle);
+        //Calls httpHelper.cs
+        HttpHelper http = new HttpHelper();
 
-        //Make a search
-        homePage.Search(searchText); 
+        //Sets the URL for the HTTP request
+        http.url = homePage.homePageUrl;
 
-        //Get the search results
-        IReadOnlyCollection<IWebElement> searchResults = homePage.GetSearchResultsElements();
+        //Checks home page url
+        http.checkUrl().Wait();
 
-        //Verify if the text is found in the search results
-        foreach (IWebElement result in searchResults)
-        {
-            Assert.IsTrue(result.Text.Contains(searchText, StringComparison.OrdinalIgnoreCase));
-            
-        }
+        //Verifies the test
+        Assert.IsTrue(http.checkUrl().Result.Contains("OK"));
         
     }
 

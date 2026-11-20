@@ -15,6 +15,7 @@ Stacks needed to execute the tests:
 - Page Object Model (POM) — the structure used to keep page interactions separate from test scenarios.
 - Coverlet — collects test coverage.
 - DotNetSeleniumExtras.WaitHelpers — used for Selenium wait helpers.
+- HttpClient - used for http requests.
 
 # Project Structure
 
@@ -24,6 +25,11 @@ For each page of the website, it is being created a class with their objects and
 
 Also, each page has a test class, were the scenarios were designed to meet the requirements of the functionalities for their respctive page.
 
+Smoke tests: In order to optimize the test of the website, the "Smoke" category is being added to the most critical scenarios. This way, the user can choose to check only the critical functionalities instead of executing all tests.
+
+*Note:* The criticallity attributed to the functionalities assumed to be most commonly used. But the flags can be changed accordingly to the user necessities.
+
+
 ## Current Projetc Tree
 
 ```text
@@ -32,6 +38,8 @@ OSDe2eTests/
 │   ├── pages/
 │   │   └── homePage.cs
 │   └── tests/
+|       ├──helpers/
+|       |   └──httpHelper.cs
 │       ├── homePageTests.cs
 │       └── testBase.cs
 ├── e2e-tests-project.csproj
@@ -56,15 +64,17 @@ OSDe2eTests/
 ## Done
 
 - Technologies defined
-- WebDriver lifecycle configured
+- WebDriver lifecycle configured (*Note: the end of the lifecycle is commented at the moment for testing purposes)
 
 
 ## Ongoing
 
+- Building the httpHelper.cs, which will execute link validations through http requests
 - Finish the "Home Page" locator/methods class
 - Finish "Home Page" tests
 
 ## Next steps
 
+- Finish httpHelper.cs
 - Build the "Events" page locator/methods class
 - Build "Events" tests
